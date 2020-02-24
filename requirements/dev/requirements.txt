@@ -1,0 +1,6 @@
+fastapi
+aioredis
+tortoise-orm
+asyncpg
+pytest
+aiohttp

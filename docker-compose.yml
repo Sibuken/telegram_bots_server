@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    web:
+        image: party_maker:latest
+        container_name: party_maker
+        ports:
+            - "9222:80"
+        volumes:
+            - ./app:/app
+        env_file:
+            - ./app/.envs/.app
+        depends_on:
+            - db1
+        mem_limit: 1G
+        restart: on-failure
+    db1:
+        image: postgres:latest
+        container_name: Postgres-maker
+        env_file:
+            - ./app/.envs/.app
+        expose:
+            - "5432"

@@ -1,0 +1,6 @@
+fastapi
+aioredis
+tortoise-orm
+asyncpg
+aiohttp
+sentry-sdk==0.14.1
